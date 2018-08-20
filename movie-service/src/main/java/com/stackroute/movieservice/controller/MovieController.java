@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,7 @@ import com.stackroute.movieservice.domain.Movie;
 import com.stackroute.movieservice.exceptions.MovieAlreadyExistsException;
 import com.stackroute.movieservice.exceptions.MovieNotFoundException;
 import com.stackroute.movieservice.services.MovieServices;
-
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1/")
 public class MovieController {
